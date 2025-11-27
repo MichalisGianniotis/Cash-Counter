@@ -6,8 +6,15 @@
 }
 body {
     /* padding: 32px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
-    background-image: linear-gradient(-50deg, black, black 10%, darkred, darkred, black, black);
+    /* background-image: linear-gradient(-50deg, black, rgb(0, 0, 92), black); */
+    /* background: radial-gradient(circle at top left, #000000, #1e3a8a, #000000);  */
+    /* background-color: #0F172A; */
+    background-color: #001642;
 }
 img {
     position: absolute;
@@ -16,10 +23,10 @@ img {
     width: 250px;
     height: 250px;
 }
-h1 {
+#title {
     padding: 40px;
-    margin-top: 400px;
-    color: whitesmoke;
+    margin-top: 300px;
+    color: #E5E7EB;
     /* position: absolute; */
     /* top: 400px; */
     font-size: 28px;
@@ -29,29 +36,51 @@ h1 {
 h2 {
     margin: auto;
     padding: 32px;
-    color: white;
+    color: #E5E7EB;
     text-align: center;
     font-weight: 400;
 }
 .container {
-    margin: 300px auto;
-    display: flex;
-    font-size: 22px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 16px;
     width: 100%;
-    height: 100%;
+    padding: 30px;
+    margin-top: 120px;
+}
+
+.content-container {
+    /* background: radial-gradient(circle at center, #1e3a8a 30%, #000000);  */
+    background: color-mix(in srgb, #1e3a8a 70%, #000000 30%);
+    /* background: rgba(255, 255, 255, 0.15); */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+    box-shadow: 0 8px 32px rgba(75, 120, 245, 0.6);
+    padding: 24px 16px;
+    max-width: 600px;
+    width: 100%;
+    margin: 40px auto;
     /* border-radius: 30px; */
     /* border: 5px solid; */
     /* border-top: 5px solid;
     border-bottom: 5px solid; */
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    /* background-color: #1F2937;
+    background-color: black; */
     /* background-image: linear-gradient(270deg, darkred, black); */
+    /* animation-name: showTool;
+    animation-timeline: view(); */
 }
+/* @keyframes showTool {
+    0% {
+        transform: translateY(50px)
+    }
+    100% {
+        transform: translateY(-200px);
+    }
+} */
 form {
-    color: whitesmoke;
+    font-size: 20px;
+    color: #E5E7EB;
     display: grid;
     grid-template-columns: 1fr 1fr;
     flex-direction: column;
@@ -59,9 +88,14 @@ form {
     text-align: center;
 }
 input {
+    background-color: #1F2937;
+    color: #E5E7EB;
     font-family:Arial, Helvetica, sans-serif;
-    height: 35px;
-    width: 50px;
+    border: 1px solid #374151;
+    outline: none;
+    height: 40px;
+    width: 80px;
+    padding: 10px;
     margin: 8px;
     font-size: 18px;
 }
@@ -73,20 +107,50 @@ input[type=number]::-webkit-outer-spin-button {
 }
 input[type=button] {
     background:none;
-    font-size: 22px;
+    font-size: 20px;
     width: 100px;
     height: 50px;
-    text-align: center;
-    background-color: darkred;
-    color: white;
+    /* text-align: center; */
+    margin: auto;
+    align-content: center;
+    background-color: rgba(34, 197, 94, 0.4);
+    background-color: rgb(64, 64, 192);
+    background-color: #22c55e;
+    background-color: #5D20DF;
+    color: #E5E7EB;
     border: none;
     border-radius: 20px;
+    cursor: pointer;
+}
+input:focus  {
+  /* border-color: #22C55E;
+  border-color: color-mix(in srgb, black 30%, gold 70%); */
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.4);
+  box-shadow: 0 0 0 2px color-mix(in srgb, black 10%, gold 90%);
+}
+input[type=button]:focus {
+    box-shadow: none;
 }
 #result {
     padding: 10px;
     /* background-color: black; */
     /* border: 1px solid whitesmoke; */
-    color: white;
+    color: #E5E7EB;
+    color: color-mix(in srgb, white 5%, gold 95%);
+    
     border-radius: 20px;
-    font-size: 22px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.faq {
+    text-align: center;
+    background: color-mix(in srgb, #1e3a8a 70%, #000000 30%);
+    width: 100%;
+    height: 400px;
+    padding: 20px;
+    color: #E5E7EB;
+    margin: 100px auto;
+}
+.faq h1 {
+    margin-bottom: 10px;
 }
